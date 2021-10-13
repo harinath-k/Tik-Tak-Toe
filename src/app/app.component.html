@@ -1,0 +1,22 @@
+<div style="display: flex; flex-direction: column">
+  <div class="topBar">
+    <div style="flex: 1">Tik Tak Toe</div>
+    <div><input type="number" name="value" [(ngModel)]="boxCount" style="width: 40px; margin-right: 20px;"></div>
+    <div style="margin-right: 20px;"><button (click)="ngOnInit()">Start</button></div>
+    <div style="margin-right: 20px;">|</div>
+    <div><button (click)="resetGame()">Restart</button></div>
+  </div>
+  <div style="display: flex; flex-direction: row; justify-content: center; padding: 20px">
+    <div style="flex: 1; text-align: center; max-width: 200px" [ngClass]="currentPlayer === 1 ? 'player' : ''">Player 1</div>
+    <div style="flex: 1; text-align: center;  max-width: 200px"[ngClass]="currentPlayer === 2 ? 'player' : ''">Player 2</div>
+  </div>
+  <div style="display: flex; justify-content: center">
+  <div>
+    <div *ngFor="let x of box; let xIndex=index">
+      <div *ngFor="let y of x; let yIndex=index" class="box" (click)="clicked(xIndex,yIndex)" [ngStyle]="{'color':y === '.' ? 'black' : 'white' }">
+        <div>{{y}}</div>
+      </div>
+    </div>
+  </div> 
+  </div>
+</div>

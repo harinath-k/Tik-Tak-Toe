@@ -1,0 +1,14 @@
+p {
+    font-family: Lato;
+  }
+  .topBar {
+    display: flex; background: #affff0; padding: 10px; box-shadow: 1px 1px 10px grey;
+  }
+  .player {
+    border: 1px solid black;
+    border-radius: 3px;
+    font-weight: bold;
+  }
+  .box{
+    display: inline-block; height: 40px; width: 40px;padding: 15px; margin: 1px; background: black; cursor: pointer; color: white; font-size: 30px;
+  }
